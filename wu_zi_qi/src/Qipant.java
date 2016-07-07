@@ -38,6 +38,7 @@ public class Qipant extends Frame{
 	    
 	    Frame f=new Qipant("Îå×ÓÆå");
 	    f.setVisible(true);
+		//
 	}
 	Qipant(){}
 	Qipant(String title){
