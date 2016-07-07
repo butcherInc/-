@@ -8,7 +8,7 @@ import java.awt.event.WindowListener;
 import java.awt.geom.*;
 import java.awt.geom.Rectangle2D.Double;
 import java.awt.image.BufferedImage;
-
+//branch:encoding
 public class Qipant extends Frame{
 	/**
 	 * 
