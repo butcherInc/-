@@ -69,6 +69,7 @@ public class Qipant extends Frame{
 		g2buf.fill(new Ellipse2D.Double(0,0,10,10));
 		paint1=new TexturePaint(buf,new Rectangle(0,0,10,10));
 		//监听类以这种形式放在 构造函数内  留在这里当做标本
+		//在构造这个类的对象的时候就为这个窗体加入鼠标监听 并设置相应的处理流程 
 		addMouseListener(new MouseAdapter(){
 			public void mousePressed(MouseEvent e){
 
