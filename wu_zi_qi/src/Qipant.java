@@ -10,19 +10,19 @@ import java.awt.event.WindowListener;
 import java.awt.geom.*;
 import java.awt.geom.Rectangle2D.Double;
 import java.awt.image.BufferedImage;
-
+//branch:master
 public class Qipant extends Frame{
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	//¿ØÖÆÆåÅÌµÄ²ÎÊý
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÌµÄ²ï¿½ï¿½ï¿½
 	Paint paint1;
 	static int click=0;
 	static double a=10;static double b=100; 
 	static double x;static double y;static boolean in;
 	
-    //¿ØÖÆÊý×éÒÔ¼°ÅÐ¶ÏÓï¾äµÄ²ÎÊý
+    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¼ï¿½ï¿½Ð¶ï¿½ï¿½ï¿½ï¿½Ä²ï¿½ï¿½ï¿½
 	static int[][] mapx=new int[40][40];
 	// black
 	static int num1=0;static int num2=0;
@@ -36,26 +36,26 @@ public class Qipant extends Frame{
 	    Qipant ob1=new Qipant();
 	    ob1.initializemapx();
 	    
-	    Frame f=new Qipant("Îå×ÓÆå");
+	    Frame f=new Qipant("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
 	    f.setVisible(true);
 		//
 	}
 	Qipant(){}
 	Qipant(String title){
 		super(title);
-		Button Button_start=new Button("¿ªÊ¼ÓÎÏ·");
-		Button Button_reset=new Button("ÖØÖÃÓÎÏ·");
+		Button Button_start=new Button("ï¿½ï¿½Ê¼ï¿½ï¿½Ï·");
+		Button Button_reset=new Button("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï·");
 		setLayout(new FlowLayout());
 		add(Button_start);
 		add(Button_reset);
 		setSize(420,525);
 		setBackground(Color.magenta);
 		MenuBar mb=new MenuBar();
-		Menu game=new Menu("ÓÎÏ·");
+		Menu game=new Menu("ï¿½ï¿½Ï·");
 		mb.add(game);
-		MenuItem start=new MenuItem("¿ªÊ¼ÓÎÏ·");
-		MenuItem reset=new MenuItem("ÖØÖÃÓÎÏ·");
-		MenuItem quit=new MenuItem("½áÊøÓÎÏ·");
+		MenuItem start=new MenuItem("ï¿½ï¿½Ê¼ï¿½ï¿½Ï·");
+		MenuItem reset=new MenuItem("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï·");
+		MenuItem quit=new MenuItem("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï·");
 		game.add(start);
 		game.add(reset);
 		game.add(quit);
@@ -68,7 +68,7 @@ public class Qipant extends Frame{
 		g2buf.setPaint(Color.white);
 		g2buf.fill(new Ellipse2D.Double(0,0,10,10));
 		paint1=new TexturePaint(buf,new Rectangle(0,0,10,10));
-		//¼àÌýÀàÒÔÕâÖÖÐÎÊ½·ÅÔÚ ¹¹Ôìº¯ÊýÄÚ  ÁôÔÚÕâÀïµ±×ö±ê±¾
+		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ìº¯ï¿½ï¿½ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ïµ±ï¿½ï¿½ï¿½ê±¾
 		addMouseListener(new MouseAdapter(){
 			public void mousePressed(MouseEvent e){
 
@@ -77,7 +77,7 @@ public class Qipant extends Frame{
 			    Double rectPath=new Rectangle2D.Double(10,100,400,400);
 			    in=rectPath.contains(x,y);
 			    Qipant ob=new Qipant();
-			    ob.locate(x, y);    //¶¯Ì¬¸üÐÂa b
+			    ob.locate(x, y);    //ï¿½ï¿½Ì¬ï¿½ï¿½ï¿½ï¿½a b
 			    
 			    
 				if(in && mapx[((int)a-10)/10][((int)b-100)/10]==0)
@@ -85,7 +85,7 @@ public class Qipant extends Frame{
 					ob.output(x,y,(int)a,(int)b,in);
 				    if(Bw()){
 				    	mapx[((int)a-10)/10][((int)b-100)/10]=1;
-				    	num1=0;   //Ê¹num1µÈÓÚÁã  Ö´ÐÐÍêÅÐ¶ÏÓï¾ä Ö»È¡num1Ôö¼ÓµÄ²¿·Ö È»ºóÏÂÒ»´Î ÔÙÖÃÁã
+				    	num1=0;   //Ê¹num1ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  Ö´ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½ï¿½ï¿½ï¿½ Ö»È¡num1ï¿½ï¿½ï¿½ÓµÄ²ï¿½ï¿½ï¿½ È»ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 				    	ob.initializeBoolean(1, mapx);
 				    	ob.fanxiexy(((int)a-10)/10,((int)b-100)/10,1,mapx,map1);
 				
@@ -212,7 +212,7 @@ public class Qipant extends Frame{
 		    
 		    if(mapx[((int)a-10)/10][((int)b-100)/10]==0){
 		    	g2.setPaint(paint1);
-	    	    g2.fill(new Rectangle2D.Double(10,100,400,400)); //ÌîÂú¸ø¶¨µÄ¾ØÐÎ¾ÖÓò
+	    	    g2.fill(new Rectangle2D.Double(10,100,400,400)); //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¾ï¿½ï¿½Î¾ï¿½ï¿½ï¿½
 		    }
 	    	 if(mapx[((int)a-10)/10][((int)b-100)/10]==1){        //sun.awt.RepaintArea.paintComponent(Unknown Source)
 					g2.setPaint(Color.black);
@@ -229,7 +229,7 @@ public class Qipant extends Frame{
 		else return false;
 	}
 	public void output(double x,double y,int a,int b,boolean in){
-    	System.out.println("("+x+","+y+")"+"  ("+a+","+b+")"+"  ÊÇ·ñÔÚÆåÅÌÄÚ£º"+in);
+    	System.out.println("("+x+","+y+")"+"  ("+a+","+b+")"+"  ï¿½Ç·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú£ï¿½"+in);
     	}
     public void locate(double x,double y){
         int temp1=(int)x; int temp2=(int)y;
@@ -257,9 +257,9 @@ public class Qipant extends Frame{
 	}
 	void shuiping(int i,int j,int bw){
 		
-		if(i<40 && j+1<40 && i>=0 && j+1>=0 && map1[i][j+1]){shuipingxy(i,j+1,bw,mapx,map1);}  //Ô½½çÔò²»´´½¨¸±±¾
+		if(i<40 && j+1<40 && i>=0 && j+1>=0 && map1[i][j+1]){shuipingxy(i,j+1,bw,mapx,map1);}  //Ô½ï¿½ï¿½ï¿½ò²»´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		
-		if(i<40 && j-1<40 && i>=0 && j-1>=0 && map1[i][j-1]){shuipingxy(i,j-1,bw,mapx,map1);}  //shuipingxy(i,j-1) µ÷ÓÃÁË¸¸ÀàµÄº¯Êý   º¯ÊýÔÚmapÖ´ÐÐ   ¶ø²»ÊÇmap3
+		if(i<40 && j-1<40 && i>=0 && j-1>=0 && map1[i][j-1]){shuipingxy(i,j-1,bw,mapx,map1);}  //shuipingxy(i,j-1) ï¿½ï¿½ï¿½ï¿½ï¿½Ë¸ï¿½ï¿½ï¿½Äºï¿½ï¿½ï¿½   ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½mapÖ´ï¿½ï¿½   ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½map3
 		
 	}
 	void chuizhixy(int i,int j,int bw,int[][] mapx,boolean[][] map1){
@@ -272,7 +272,7 @@ public class Qipant extends Frame{
 	}
 	void chuizhi(int i,int j,int bw){
 		
-		if(i-1<40 && j<40 && i-1>=0 && j>=0 && map1[i-1][j]){chuizhixy(i-1,j,bw,mapx,map1);}  //Ô½½çÔò²»´´½¨¸±±¾
+		if(i-1<40 && j<40 && i-1>=0 && j>=0 && map1[i-1][j]){chuizhixy(i-1,j,bw,mapx,map1);}  //Ô½ï¿½ï¿½ï¿½ò²»´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		
 		if(i+1<40 && j<40 && i+1>=0 && j>=0 && map1[i+1][j]){chuizhixy(i+1,j,bw,mapx,map1);}
 		
@@ -287,7 +287,7 @@ public class Qipant extends Frame{
 	}
 	void zhengxie(int i,int j,int bw){
 		
-		if(i-1<40 && j+1<40 && i-1>=0 && j+1>=0 && map1[i-1][j+1]){zhengxiexy(i-1,j+1,bw,mapx,map1);}  //Ô½½çÔò²»´´½¨¸±±¾
+		if(i-1<40 && j+1<40 && i-1>=0 && j+1>=0 && map1[i-1][j+1]){zhengxiexy(i-1,j+1,bw,mapx,map1);}  //Ô½ï¿½ï¿½ï¿½ò²»´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	
 		if(i+1<40 && j-1<40 && i+1>=0 && j-1>=0 && map1[i+1][j-1]){zhengxiexy(i+1,j-1,bw,mapx,map1);}
 	
@@ -303,16 +303,16 @@ public class Qipant extends Frame{
 	}
 	void fanxie(int i,int j,int bw){
 
-		if(i+1<40 && j+1<40 && i+1>=0 && j+1>=0 && map1[i+1][j+1]){fanxiexy(i+1,j+1,bw,mapx,map1);}  //Ô½½çÔò²»´´½¨¸±±¾
+		if(i+1<40 && j+1<40 && i+1>=0 && j+1>=0 && map1[i+1][j+1]){fanxiexy(i+1,j+1,bw,mapx,map1);}  //Ô½ï¿½ï¿½ï¿½ò²»´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		
 		if(i-1<40 && j-1<40 && i-1>=0 && j-1>=0 && map1[i-1][j-1]){fanxiexy(i-1,j-1,bw,mapx,map1);}
     }
     boolean[][] initializeBoolean(int bw,int[][] mapx){
     	for(int i=0;i<40;i++){
-    		for(int j=0;j<40;j++){       //Ç¶Ì×Ñ­»·£¬³õÊ¼»¯Boolean¶þÎ¬Êý×é£¬
-    			if(mapx[i][j]==bw) map1[i][j]=true;//±ÈÈçËµ´«ÈëµÄÆå×ÓÊÇºÚÆå£¬¼´bw=1;Ôò³õÊ¼»¯µÄ½á¹ûÊÇ£º
-    			else map1[i][j]=false; //     intÊý×éºÍBooleanÊý×éÆäÊµ½á¹¹Ò»ÑùµÄ£¬ÔÚbw=1µÄµØ·½¡£ÔÚ
-    			                       //     BooleanÊý×éÉÏ¸³Öµtrue.
+    		for(int j=0;j<40;j++){       //Ç¶ï¿½ï¿½Ñ­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½Booleanï¿½ï¿½Î¬ï¿½ï¿½ï¿½é£¬
+    			if(mapx[i][j]==bw) map1[i][j]=true;//ï¿½ï¿½ï¿½ï¿½Ëµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Çºï¿½ï¿½å£¬ï¿½ï¿½bw=1;ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½Ä½ï¿½ï¿½ï¿½Ç£ï¿½
+    			else map1[i][j]=false; //     intï¿½ï¿½ï¿½ï¿½ï¿½Booleanï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Êµï¿½á¹¹Ò»ï¿½ï¿½ï¿½Ä£ï¿½ï¿½ï¿½bw=1ï¿½ÄµØ·ï¿½ï¿½ï¿½ï¿½ï¿½
+    			                       //     Booleanï¿½ï¿½ï¿½ï¿½ï¿½Ï¸ï¿½Öµtrue.
     		}
     	}
     	return map1;
